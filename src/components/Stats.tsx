@@ -34,15 +34,15 @@ function AnimatedNumber({ value }: { value: string }) {
 export default function Stats() {
   if (!site.stats.length) return null;
   return (
-    <div className="relative z-10 -mt-16 md:-mt-20 px-4 md:px-6 pb-0">
+    <div className="w-full py-10 px-4 md:px-6 bg-white">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-5xl mx-auto"
       >
-        <div className="bg-white rounded-3xl shadow-2xl shadow-gray-200/80 border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-xl shadow-gray-200/60 border border-gray-100 overflow-hidden">
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {site.stats.map((s, i) => (
               <div
